@@ -17,9 +17,12 @@ import unittest
 
 class TestMultiMapping(unittest.TestCase):
 
-    def _makeOne(self):
+    def _getTargetClass(self):
         from MultiMapping import MultiMapping
-        return MultiMapping()
+        return MultiMapping
+
+    def _makeOne(self):
+        return self._getTargetClass()()
 
     def test_push(self):
         m = self._makeOne()
@@ -63,10 +66,20 @@ class TestMultiMapping(unittest.TestCase):
         m.push({'spam': 1})
         self.assertEqual(len(m), 1)
 
+    def test_is_extension_class(self):
+        from ExtensionClass import Base
+        self.assertTrue(isinstance(self._makeOne(), Base))
+
+class TestPyMultiMapping(TestMultiMapping):
+
+    def _getTargetClass(self):
+        from MultiMapping import pyMultiMapping
+        return pyMultiMapping
 
 def test_suite():
     return unittest.TestSuite((
         unittest.makeSuite(TestMultiMapping),
+        unittest.makeSuite(TestPyMultiMapping),
         ))
 
 if __name__ == '__main__':

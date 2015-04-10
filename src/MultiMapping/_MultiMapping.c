@@ -139,10 +139,11 @@ MM_getattr(MMobject *self, char *name)
   return Py_FindMethod(MM_methods, (PyObject *)self, name);
 }
 
-static int
+static Py_ssize_t
 MM_length(MMobject *self)
 {
-  long l=0, el, i;
+  Py_ssize_t l=0;
+  long el, i;
   PyObject *e=0;
 
   UNLESS(-1 != (i=PyList_Size(self->data))) return -1;
@@ -156,7 +157,7 @@ MM_length(MMobject *self)
 }
 
 static PyMappingMethods MM_as_mapping = {
-	(inquiry)MM_length,		/*mp_length*/
+	(lenfunc)MM_length,		/*mp_length*/
 	(binaryfunc)MM_subscript,      	/*mp_subscript*/
 	(objobjargproc)NULL,		/*mp_ass_subscript*/
 };

@@ -67,4 +67,5 @@ setup(
     install_requires=['ExtensionClass'],
     include_package_data=True,
     zip_safe=False,
+    test_suite="MultiMapping.tests",
     )
