@@ -1,7 +1,8 @@
 import os
 
+from ExtensionClass import Base
 
-class MultiMapping:
+class MultiMapping(Base):
     __slots__ = ('__dicts__',)
 
     def __init__(self, *args):
@@ -38,6 +39,7 @@ class MultiMapping:
     def __len__(self):
         return sum(len(d) for d in self.__dicts__)
 
+pyMultiMapping = MultiMapping
 
 if 'PURE_PYTHON' not in os.environ:  # pragma no cover
     try:
