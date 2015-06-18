@@ -33,7 +33,7 @@ setup(name='MultiMapping',
             sources=[join('src', 'MultiMapping', '_MultiMapping.c')],
             depends=[join('include', 'ExtensionClass', 'ExtensionClass.h')]),
       ],
-      install_requires=['ExtensionClass'],
+      install_requires=['ExtensionClass<4.0dev'],
       include_package_data=True,
       zip_safe=False,
       )
