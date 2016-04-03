@@ -37,7 +37,7 @@ else:
 
 setup(
     name='MultiMapping',
-    version='3.0',
+    version='3.1.dev0',
     url='http://pypi.python.org/pypi/MultiMapping',
     license='ZPL 2.1',
     description="Special MultiMapping objects used in Zope2.",
