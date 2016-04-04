@@ -14,3 +14,7 @@ script:
     - tox -e $TOX_ENV
 notifications:
     email: false
+cache:
+  pip: true
+  directories:
+    - eggs/
