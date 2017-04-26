@@ -34,10 +34,11 @@ else:
         ),
     ]
 
+__version__ = '3.1.dev0'
 
 setup(
     name='MultiMapping',
-    version='3.1.dev0',
+    version=__version__,
     url='http://pypi.python.org/pypi/MultiMapping',
     license='ZPL 2.1',
     description="Special MultiMapping objects used in Zope2.",
@@ -49,7 +50,6 @@ setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.4",
