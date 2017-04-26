@@ -1,17 +1,19 @@
 language: python
 sudo: false
-python: 3.5
-env:
-    - TOX_ENV=py26
-    - TOX_ENV=py27
-    - TOX_ENV=py34
-    - TOX_ENV=py35
-    - TOX_ENV=pypy
-    - TOX_ENV=pypy3
+python:
+    - "2.7"
+    - "3.4"
+    - "3.5"
+    - "3.6"
+    - "pypy"
+    - "pypy3.3-5.2-alpha1"
 install:
-    - pip install tox
+    - pip install -U setuptools
+    - pip install zc.buildout
+    - buildout bootstrap
+    - buildout
 script:
-    - tox -e $TOX_ENV
+    - bin/test -v1
 notifications:
     email: false
 cache:
