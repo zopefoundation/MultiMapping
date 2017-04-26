@@ -34,7 +34,7 @@ else:
         ),
     ]
 
-__version__ = '3.1.dev0'
+__version__ = '3.1'
 
 setup(
     name='MultiMapping',
