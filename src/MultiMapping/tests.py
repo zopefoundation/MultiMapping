@@ -55,11 +55,17 @@ class TestMultiMapping(unittest.TestCase):
         self.assertEqual(m.get('spam'), 1)
         self.assertEqual(m.get('eggs'), None)
 
+    def test_contains(self):
+        m = self._makeOne()
+        m.push({'spam': 1})
+        self.assertTrue('spam' in m)
+        self.assertFalse('eggs' in m)
+
     def test_has_key(self):
         m = self._makeOne()
         m.push({'spam': 1})
-        self.assertTrue(m.has_key('spam'))
-        self.assertFalse(m.has_key('eggs'))
+        self.assertTrue(m.has_key('spam'))  # NOQA
+        self.assertFalse(m.has_key('eggs'))  # NOQA
 
     def test_len(self):
         m = self._makeOne()
