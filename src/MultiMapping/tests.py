@@ -75,18 +75,3 @@ class TestMultiMapping(unittest.TestCase):
     def test_is_extension_class(self):
         from ExtensionClass import Base
         self.assertTrue(isinstance(self._makeOne(), Base))
-
-class TestPyMultiMapping(TestMultiMapping):
-
-    def _getTargetClass(self):
-        from MultiMapping import pyMultiMapping
-        return pyMultiMapping
-
-def test_suite():
-    return unittest.TestSuite((
-        unittest.makeSuite(TestMultiMapping),
-        unittest.makeSuite(TestPyMultiMapping),
-        ))
-
-if __name__ == '__main__':
-    unittest.main()

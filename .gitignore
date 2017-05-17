@@ -4,10 +4,8 @@ dist
 lib
 parts
 
-*.dll
 *.pyc
 *.pyo
-*.so
 .coverage
 .installed.cfg
 .tox

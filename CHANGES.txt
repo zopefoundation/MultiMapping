@@ -6,6 +6,8 @@ Changelog
 
 - Add `__contains__` support.
 
+- Remove the Python 2-only C extension.
+
 3.1 (2017-04-26)
 ----------------
 
