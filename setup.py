@@ -12,27 +12,7 @@
 #
 ##############################################################################
 
-from os.path import join
-from setuptools import setup, find_packages, Extension
-import os
-import platform
-import sys
-
-# PyPy won't build the extension.
-py_impl = getattr(platform, 'python_implementation', lambda: None)
-is_pypy = py_impl() == 'PyPy'
-is_pure = 'PURE_PYTHON' in os.environ
-py3k = sys.version_info >= (3, )
-if is_pypy or is_pure or py3k:
-    ext_modules = []
-else:
-    ext_modules = [
-        Extension(
-            name='MultiMapping._MultiMapping',
-            include_dirs=['include', 'src'],
-            sources=[join('src', 'MultiMapping', '_MultiMapping.c')],
-        ),
-    ]
+from setuptools import setup, find_packages
 
 __version__ = '3.2.dev0'
 
@@ -60,10 +40,10 @@ setup(
     ],
     author='Zope Foundation and Contributors',
     author_email='zope-dev@zope.org',
-    long_description=open('README.txt').read() + '\n' + open('CHANGES.txt').read(),
+    long_description=(open('README.txt').read() + '\n' +
+                      open('CHANGES.txt').read()),
     packages=find_packages('src'),
     package_dir={'': 'src'},
-    ext_modules=ext_modules,
     install_requires=['ExtensionClass'],
     include_package_data=True,
     zip_safe=False,
