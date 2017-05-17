@@ -1,7 +1,7 @@
 Changelog
 =========
 
-3.2 (unreleased)
+4.0 (2017-05-17)
 ----------------
 
 - Add `__contains__` support.
