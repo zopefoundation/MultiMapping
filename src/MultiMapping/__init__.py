@@ -22,12 +22,14 @@ class MultiMapping(Base):
         except KeyError:
             return default
 
-    def has_key(self, key):
+    def __contains__(self, key):
         try:
             self[key]
         except KeyError:
             return False
         return True
+
+    has_key = __contains__  # NOQA
 
     def push(self, d):
         self.__dicts__.append(d)
