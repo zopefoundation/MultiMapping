@@ -4,6 +4,7 @@ Changelog
 4.1 (unreleased)
 ----------------
 
+- Added support for Python 3.7.
 
 4.0 (2017-05-17)
 ----------------
