@@ -14,18 +14,18 @@
 
 from setuptools import setup, find_packages
 
-__version__ = '4.1.dev0'
+version = '4.1.dev0'
 
 setup(
     name='MultiMapping',
-    version=__version__,
-    url='http://pypi.python.org/pypi/MultiMapping',
+    version=version,
+    url='https://github.com/zopefoundation/MultiMapping',
     license='ZPL 2.1',
-    description="Special MultiMapping objects used in Zope2.",
+    description="Special MultiMapping objects used in Zope.",
     classifiers=[
         "Development Status :: 6 - Mature",
         "Environment :: Web Environment",
-        "Framework :: Zope2",
+        "Framework :: Zope :: 4",
         "License :: OSI Approved :: Zope Public License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
