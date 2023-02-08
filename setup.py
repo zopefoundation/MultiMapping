@@ -27,7 +27,7 @@ setup(
     classifiers=[
         "Development Status :: 6 - Mature",
         "Environment :: Web Environment",
-        "Framework :: Zope :: 4",
+        "Framework :: Zope :: 5",
         "License :: OSI Approved :: Zope Public License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
@@ -41,13 +41,13 @@ setup(
         "Programming Language :: Python :: Implementation :: PyPy",
     ],
     author='Zope Foundation and Contributors',
-    author_email='zope-dev@zope.org',
+    author_email='zope-dev@zope.dev',
     long_description=(open('README.txt').read() + '\n' +
                       open('CHANGES.txt').read()),
     packages=find_packages('src'),
     package_dir={'': 'src'},
+    python_requires='>=3.7',
     install_requires=['ExtensionClass'],
     include_package_data=True,
     zip_safe=False,
-    test_suite="MultiMapping.tests",
 )
