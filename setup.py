@@ -12,9 +12,11 @@
 #
 ##############################################################################
 
-from setuptools import setup, find_packages
+from setuptools import find_packages
+from setuptools import setup
 
-version = '4.2.dev0'
+
+version = '5.0.dev0'
 
 setup(
     name='MultiMapping',
@@ -25,29 +27,27 @@ setup(
     classifiers=[
         "Development Status :: 6 - Mature",
         "Environment :: Web Environment",
-        "Framework :: Zope :: 4",
+        "Framework :: Zope :: 5",
         "License :: OSI Approved :: Zope Public License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
     ],
     author='Zope Foundation and Contributors',
-    author_email='zope-dev@zope.org',
+    author_email='zope-dev@zope.dev',
     long_description=(open('README.txt').read() + '\n' +
                       open('CHANGES.txt').read()),
     packages=find_packages('src'),
     package_dir={'': 'src'},
+    python_requires='>=3.7',
     install_requires=['ExtensionClass'],
     include_package_data=True,
     zip_safe=False,
-    test_suite="MultiMapping.tests",
 )
