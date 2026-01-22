@@ -40,6 +40,8 @@ dependencies = ["ExtensionClass"]
 
 [project.urls]
 Source = "https://github.com/zopefoundation/MultiMapping"
+Issues = "https://github.com/zopefoundation/MultiMapping/issues"
+Changelog = "https://github.com/zopefoundation/MultiMapping/blob/master/CHANGES.txt"
 
 [tool.coverage.run]
 branch = true
