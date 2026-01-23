@@ -12,7 +12,7 @@ build-backend = "setuptools.build_meta"
 name = "MultiMapping"
 version = "6.0.dev0"
 description = "Special MultiMapping objects used in Zope."
-license = "ZPL-2.1"
+license = {text = "ZPL-2.1"}
 classifiers = [
     "Development Status :: 6 - Mature",
     "Environment :: Web Environment",
@@ -67,5 +67,5 @@ exclude_lines = [
 directory = "parts/htmlcov"
 
 [tool.setuptools.dynamic]
-readme = {file = ["README.txt", "CHANGES.txt"]}
+readme = {file = ["README.rst", "CHANGES.rst"]}
 
