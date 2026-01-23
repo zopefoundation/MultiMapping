@@ -10,7 +10,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "MultiMapping"
-version = "5.1"
+version = "5.2.dev0"
 description = "Special MultiMapping objects used in Zope."
 license = {text = "ZPL-2.1"}
 classifiers = [
