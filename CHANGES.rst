@@ -4,7 +4,7 @@ Changelog
 5.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Remove missing test extra from tox configuration.
 
 
 5.1 (2026-01-23)
