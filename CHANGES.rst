@@ -4,6 +4,8 @@ Changelog
 5.2 (unreleased)
 ----------------
 
+- Drop support for Python 3.10.
+
 - Remove missing test extra from tox configuration.
 
 
